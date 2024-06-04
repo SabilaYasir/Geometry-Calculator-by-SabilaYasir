@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geometry Calculator by Sabila Yasir</title>
+    <script>
+        function hitungPersegi() {
+            var sisi = parseFloat(document.getElementById("sisi-persegi").value);
+            var keliling = 4 * sisi;
+            var luas = Math.pow(sisi, 2);
+            alert("Keliling Persegi: " + keliling + "\nLuas Persegi: " + luas);
+        }
+
+        function hitungPersegiPanjang() {
+            var panjang = parseFloat(document.getElementById("panjang").value);
+            var lebar = parseFloat(document.getElementById("lebar").value);
+            var keliling = 2 * (panjang + lebar);
+            var luas = panjang * lebar;
+            alert("Keliling Persegi Panjang: " + keliling + "\nLuas Persegi Panjang: " + luas);
+        }
+
+        function hitungLingkaran() {
+            var jariJari = parseFloat(document.getElementById("jari-jari").value);
+            var keliling = 2 * Math.PI * jariJari;
+            var luas = Math.PI * Math.pow(jariJari, 2);
+            alert("Keliling Lingkaran: " + keliling.toFixed(2) + "\nLuas Lingkaran: " + luas.toFixed(2));
+        }
+
+        function hitungSegitiga() {
+            var alas = parseFloat(document.getElementById("alas").value);
+            var tinggi = parseFloat(document.getElementById("tinggi").value);
+            var sisi1 = parseFloat(document.getElementById("sisi1").value);
+            var sisi2 = parseFloat(document.getElementById("sisi2").value);
+            var keliling = alas + sisi1 + sisi2;
+            var luas = 0.5 * alas * tinggi;
+            alert("Keliling Segitiga: " + keliling + "\nLuas Segitiga: " + luas);
+        }
+
+        function hitungKubus() {
+            var sisi = parseFloat(document.getElementById("sisi-kubus").value);
+            var volume = Math.pow(sisi, 3);
+            var luasPermukaan = 6 * Math.pow(sisi, 2);
+            alert("Volume Kubus: " + volume + "\nLuas Permukaan Kubus: " + luasPermukaan);
+        }
+
+        function hitungBalok() {
+            var panjang = parseFloat(document.getElementById("panjang-balok").value);
+            var lebar = parseFloat(document.getElementById("lebar-balok").value);
+            var tinggi = parseFloat(document.getElementById("tinggi-balok").value);
+            var volume = panjang * lebar * tinggi;
+            var luasPermukaan = 2 * (panjang * lebar + panjang * tinggi + lebar * tinggi);
+            alert("Volume Balok: " + volume + "\nLuas Permukaan Balok: " + luasPermukaan);
+        }
+
+        function hitungTabung() {
+            var jariJari = parseFloat(document.getElementById("jari-jari-tabung").value);
+            var tinggi = parseFloat(document.getElementById("tinggi-tabung").value);
+            var volume = Math.PI * Math.pow(jariJari, 2) * tinggi;
+            var luasPermukaan = 2 * Math.PI * jariJari * (jariJari + tinggi);
+            alert("Volume Tabung: " + volume.toFixed(2) + "\nLuas Permukaan Tabung: " + luasPermukaan.toFixed(2));
+        }
+    </script>
+</head>
+<body>
+    <h2>Bangun Datar</h2>
+    <h3>Persegi</h3>
+    Sisi: <input type="number" id="sisi-persegi"> <br>
+    <button onclick="hitungPersegi()">Hitung Keliling dan Luas</button>
+
+    <h3>Persegi Panjang</h3>
+    Panjang: <input type="number" id="panjang"> <br>
+    Lebar: <input type="number" id="lebar"> <br>
+    <button onclick="hitungPersegiPanjang()">Hitung Keliling dan Luas</button>
+
+    <h3>Lingkaran</h3>
+    Jari-jari: <input type="number" id="jari-jari"> <br>
+    <button onclick="hitungLingkaran()">Hitung Keliling dan Luas</button>
+
+    <h3>Segitiga</h3>
+    Alas: <input type="number" id="alas"> <br>
+    Tinggi: <input type="number" id="tinggi"> <br>
+    Sisi 1: <input type="number" id="sisi1"> <br>
+    Sisi 2: <input type="number" id="sisi2"> <br>
+    <button onclick="hitungSegitiga()">Hitung Keliling dan Luas</button>
+
+    <h2>Bangun Ruang</h2>
+    <h3>Kubus</h3>
+    Sisi: <input type="number" id="sisi-kubus"> <br>
+    <button onclick="hitungKubus()">Hitung Volume dan Luas Permukaan</button>
+
+    <h3>Balok</h3>
+    Panjang: <input type="number" id="panjang-balok"> <br>
+    Lebar: <input type="number" id="lebar-balok"> <br>
+    Tinggi: <input type="number" id="tinggi-balok"> <br>
+    <button onclick="hitungBalok()">Hitung Volume dan Luas Permukaan</button>
+
+    <h3>Tabung</h3>
+    Jari-jari: <input type="number" id="jari-jari-tabung"> <br>
+    Tinggi: <input type="number" id="tinggi-tabung"> <br>
+    <button onclick="hitungTabung()">Hitung Volume dan Luas Permukaan</button>
+</body>
+</html>
